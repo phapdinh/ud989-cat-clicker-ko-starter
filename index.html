@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Cat Clicker</title>
+  <meta charset="UTF-8">
+  <title>Cat Clicker</title>
 </head>
 <body>
-    <ul id="cat-list" data-bind='foreach: catList'>
-	  <li data-bind='click: $parent.changeCat, text: name'></li>
-	</ul>
-    <div id="cat" data-bind="with: currentCat">
-        <h2 id="cat-name" data-bind="text: name"></h2>
-		<h3 data-bind="text: title"></h3>
-        <div id="cat-count" data-bind="text: clickCount"></div>
-        <img id="cat-img" src="" alt="cute cat" data-bind="click: $parent.incrementCounter, attr: {src: imgSrc}">
-        <h3>Nicknames:</h3>
+  <form id="cat-list" data-bind='foreach: catList'>
+    <button type="button" data-bind='click: $parent.changeCat, text: name'></button>
+	</form>
+  <div id="cat" data-bind="with: currentCat">
+    <h2 id="cat-name" data-bind="text: name"></h2>
+	  <h3 data-bind="text: title"></h3>
+    <div id="cat-count" data-bind="text: clickCount"></div>
+    <img id="cat-img" src="" alt="cute cat" data-bind="click: $parent.incrementCounter, attr: {src: imgSrc}">
+    <h3>Nicknames:</h3>
 		<ul data-bind='foreach: nicknameArray'>
 		  <li data-bind="text: $data"></li>
 		</ul>
-    </div>
-    <script src="js/lib/knockout-3.2.0.js"></script>
-    <script src="js/app.js"></script>
+  </div>
+  <script src="js/lib/knockout-3.2.0.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
