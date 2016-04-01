@@ -9,8 +9,10 @@
     <button type="button" data-bind='click: $parent.changeCat, text: name'></button>
 	</form>
   <div id="cat" data-bind="with: currentCat">
-    <h2 id="cat-name" data-bind="text: name"></h2>
-	  <h3 data-bind="text: title"></h3>
+    <h2>Cat Name:</h2>
+    <h4 id="cat-name" data-bind="text: name"></h4>
+	<h2>Age:</h2>
+	<h4 data-bind="text: title"></h4>
     <div id="cat-count" data-bind="text: clickCount"></div>
     <img id="cat-img" src="" alt="cute cat" data-bind="click: $parent.incrementCounter, attr: {src: imgSrc}">
     <h3>Nicknames:</h3>
