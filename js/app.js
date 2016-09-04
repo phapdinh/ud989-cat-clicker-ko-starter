@@ -78,6 +78,9 @@ var ViewModel = function() {
   this.changeCat = function(clickedCat) {
     self.currentCat(clickedCat);
   }
+  this.addCat = function() {
+	  
+  }
 }
 
 ko.applyBindings(new ViewModel());
